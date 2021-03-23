@@ -7,6 +7,12 @@ class HelloSerializer(serializers.Serializer):
     """Serializes a name field for testing our APIView"""
     name = serializers.CharField(max_length=10)
 
+    def create(self, validated_data):
+        pass
+
+    def update(self, instance, validated_data):
+        pass
+
 
 class UserProfileSerializer(serializers.ModelSerializer):
     """Serializes an user profle object"""
